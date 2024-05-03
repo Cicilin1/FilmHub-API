@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { createMovie, deleteMovie, getMovie, updateMovie } from "./controllers/MovieController.js";
+import { createMovie, deleteMovie, getMovie, getMovieAndCategories, updateMovie } from "./controllers/MovieController.js";
 import { getCategories, createCategory, deleteCategory, updateCategory } from "./controllers/CategoryController.js";
 
 const routes = Router()
 
-routes.get('/movies', getMovie) 
+routes.get('/movies-categories', getMovieAndCategories) 
 routes.post('/movie', createMovie) 
 routes.delete('/movie/:id', deleteMovie)
 routes.put('/movie/:id', updateMovie)
